@@ -24,28 +24,52 @@ h2 {
     transition: background-color 0s linear !important;
 }
 
+/*.github:hover {*/
+/*    background-color: #9400D3;*/
+/*}*/
+
+/*.stack-overflow:hover {*/
+/*    background-color: #4B0082;*/
+/*}*/
+
+/*.linkedin:hover {*/
+/*    background-color: green;*/
+/*}*/
+
+/*.hackerrank:hover {*/
+/*    background-color: #0000FF;*/
+/*}*/
+
+/*.instagram:hover {*/
+/*    background-color: #FF7F00;*/
+/*}*/
+
+/*.facebook:hover {*/
+/*    background-color: #FF0000;*/
+/*}*/
+
 .github:hover {
-    background-color: #9400D3;
+    background-color: black;
 }
 
 .stack-overflow:hover {
-    background-color: #4B0082;
-}
-
-.linkedin:hover {
-    background-color: green;
+    background-color: #F4811D;
 }
 
 .hackerrank:hover {
-    background-color: #0000FF;
+    background-color: #1CAC4F;
+}
+
+.linkedin:hover {
+    background-color: #0066C8;
 }
 
 .instagram:hover {
-    background-color: #FF7F00;
+    background: #D50124FF;
 }
 
 .facebook:hover {
-    background-color: #FF0000;
+    background-color: #0135BB;
 }
 
 a.btn-primary {
@@ -67,7 +91,6 @@ footer a:hover {
 .mt-30 {
     margin-top: 30px !important;
 }
-
 
 .frst-timeline-style-7 .frst-timeline-block::before,
 .frst-timeline-style-7 .frst-timeline-block::before,
