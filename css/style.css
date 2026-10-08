@@ -149,3 +149,11 @@ footer a:hover {
 .copyright {
     padding-top: 2px;
 }
+
+
+.photo-container img {
+  height: 100%;
+  position: relative;
+  right: 50px;
+  max-width: unset;
+}
