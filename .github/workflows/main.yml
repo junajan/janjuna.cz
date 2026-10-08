@@ -22,7 +22,9 @@ jobs:
           install -m 700 -d ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+          # Pinned host key of the janjuna.cz server (116.203.178.219)
+          echo "deploy-target ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB4dFn8Iou/3TSs499PCONwXkWk5QUXF3bDxLdjPL53j" > ~/.ssh/known_hosts
           rsync -avz \
             --exclude='.git/' --exclude='.github/' --exclude='.idea/' --exclude='.DS_Store' \
-            -e "ssh -i ~/.ssh/deploy_key -p ${SSH_PORT:-22} -o StrictHostKeyChecking=accept-new" \
+            -e "ssh -i ~/.ssh/deploy_key -p ${SSH_PORT:-22} -o HostKeyAlias=deploy-target -o StrictHostKeyChecking=yes" \
             ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
