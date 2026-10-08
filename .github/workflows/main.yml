@@ -25,6 +25,6 @@ jobs:
           # Pinned host key of the janjuna.cz server (116.203.178.219)
           echo "deploy-target ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB4dFn8Iou/3TSs499PCONwXkWk5QUXF3bDxLdjPL53j" > ~/.ssh/known_hosts
           rsync -avz \
-            --exclude='.git/' --exclude='.github/' --exclude='.idea/' --exclude='.DS_Store' \
+            --exclude='.git/' --exclude='.github/' --exclude='.idea/' --exclude='.DS_Store' --exclude='README.md' \
             -e "ssh -i ~/.ssh/deploy_key -p ${SSH_PORT:-22} -o HostKeyAlias=deploy-target -o StrictHostKeyChecking=yes" \
             ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
